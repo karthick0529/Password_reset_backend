@@ -18,7 +18,7 @@ const ResetPasswordRequest = () => {
 
   return (
     <Container>
-      <Typography variant="h4">Reset Password Request</Typography>
+      <Typography variant="h4">RESET CONFIRMATION</Typography>
       <form onSubmit={handleSubmit}>
         <TextField
           label="Email"

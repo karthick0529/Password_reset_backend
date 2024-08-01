@@ -22,7 +22,7 @@ const Register = () => {
 
   return (
     <Container>
-      <Typography variant="h4">Register</Typography>
+      <Typography variant="h4">REGISTER</Typography>
       <form onSubmit={handleSubmit}>
         <TextField
           label="Email"

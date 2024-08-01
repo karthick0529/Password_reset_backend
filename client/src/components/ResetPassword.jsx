@@ -22,7 +22,7 @@ const ResetPassword = () => {
 
   return (
     <Container>
-      <Typography variant="h4">Reset Password</Typography>
+      <Typography variant="h4">RESET PASSWORD</Typography>
       <form onSubmit={handleSubmit}>
         <TextField
           label="New Password"

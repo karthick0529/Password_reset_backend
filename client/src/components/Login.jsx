@@ -22,7 +22,7 @@ const Login = () => {
 
   return (
     <Container>
-      <Typography variant="h4">Login</Typography>
+      <Typography variant="h4">LOGIN</Typography>
       <form onSubmit={handleSubmit}>
         <TextField
           label="Email"
