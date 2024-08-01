@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { CssBaseline, Container, AppBar, Toolbar, Typography, Button, Box } from '@mui/material';import Login from './components/Login';
+import { CssBaseline, Container, AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import Login from './components/Login';
 import Register from './components/Register';
 import ResetPasswordRequest from './components/ResetPasswordRequest';
 import ResetPassword from './components/ResetPassword';
