@@ -102,7 +102,7 @@ router.post("/reset-password/:token", async (req, res) => {
     resetPasswordExpires: { $gt: Date.now() },
   });
 
-  if(!user) {
+  if (!user) {
     return res.status(404).json({
       message: "Invalid token.",
     });
@@ -115,6 +115,5 @@ router.post("/reset-password/:token", async (req, res) => {
   return res.status(200).json({
     message: "Password reset successful.",
   });
-
 });
 module.exports = router;
