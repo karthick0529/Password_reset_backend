@@ -115,7 +115,7 @@ router.post("/reset-password", async (req, res) => {
     },
   });
 
-  const resetUrl = `https://jolly-custard-445445.netlify.app/reset-password/${token}`;
+  const resetUrl = `https://password-reset-task-1.onrender.com/api/reset-password/${token}`;
 
   const message = {
     from: process.env.EMAIL_USERNAME,
