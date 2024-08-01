@@ -115,7 +115,7 @@ router.post("/reset-password", async (req, res) => {
     },
   });
 
-  const resetUrl = `http://localhost:5173/reset-password/${token}`;
+  const resetUrl = `https://66ab435dfd8f5a9e7c6fb805--scintillating-mochi-da2929.netlify.app/reset-password/${token}`;
 
   const message = {
     from: process.env.EMAIL_USERNAME,
