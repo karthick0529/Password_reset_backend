@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Typography, Box } from '@mui/material';
 
-const API_URL = 'https://password-reset-task-h1gs.onrender.com';
+const API_URL = 'https://password-reset-task-h1gs.onrender.com/api';
 
 
 const ProtectedData = () => {
@@ -12,7 +12,7 @@ const ProtectedData = () => {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`${API_URL}/api/data`, {
+        const response = await axios.get(`${API_URL}/data`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

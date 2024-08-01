@@ -9,13 +9,13 @@ const Register = () => {
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
-  const API_URL = 'https://password-reset-task-h1gs.onrender.com';
+  const API_URL = 'https://password-reset-task-h1gs.onrender.com/api';
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${API_URL}/api/user`, { email, password });
+      const response = await axios.post(`${API_URL}/user`, { email, password });
       setMessage(response.data.message);
       navigate('/login');
     } catch (error) {

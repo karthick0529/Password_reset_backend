@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
 
-const API_URL = 'https://password-reset-task-h1gs.onrender.com';
+const API_URL = 'https://password-reset-task-h1gs.onrender.com/api';
 
 
 const ResetPasswordRequest = () => {
@@ -12,7 +12,7 @@ const ResetPasswordRequest = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${API_URL}/api/reset-password`, { email });
+      const response = await axios.post(`${API_URL}/reset-password`, { email });
       setMessage(response.data.message);
     } catch (error) {
       setMessage(error.response.data.message);
