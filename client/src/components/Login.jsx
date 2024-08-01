@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
 
-const API_URL = 'https://password-reset-task-h1gs.onrender.com/api';
+const API_URL = 'https://password-reset-task-mwu6.onrender.com/api';
 
 const Login = () => {
   const [email, setEmail] = useState('');

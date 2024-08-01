@@ -9,7 +9,7 @@ const Register = () => {
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
-  const API_URL = 'https://password-reset-task-h1gs.onrender.com/api';
+  const API_URL = 'https://password-reset-task-mwu6.onrender.com/api';
 
 
   const handleSubmit = async (e) => {
