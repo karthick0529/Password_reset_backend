@@ -9,7 +9,7 @@ const ResetPasswordRequest = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/reset-password', { email });
+      const response = await axios.post('https://password-reset-task-h1gs.onrender.com/api/reset-password', { email });
       setMessage(response.data.message);
     } catch (error) {
       setMessage(error.response.data.message);

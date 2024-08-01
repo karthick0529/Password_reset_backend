@@ -12,7 +12,7 @@ const ResetPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:3000/api/reset-password/${token}`, { password });
+      const response = await axios.post(`https://password-reset-task-h1gs.onrender.com/api/reset-password/${token}`, { password });
       setMessage(response.data.message);
       navigate('/login');
     } catch (error) {

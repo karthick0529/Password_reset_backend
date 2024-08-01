@@ -14,12 +14,12 @@ function App() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" style={{ flexGrow: 1 }}>
-            Auth App
+            Password Reset Task
           </Typography>
           <Button color="inherit" href="/login">Login</Button>
           <Button color="inherit" href="/register">Register</Button>
           <Button color="inherit" href="/reset-password-request">Reset Password</Button>
-          <Button color="inherit" href="/data">Protected Data</Button>
+          {/* <Button color="inherit" href="/data">Protected Data</Button> */}
         </Toolbar>
       </AppBar>
       <Container>

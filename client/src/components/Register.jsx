@@ -12,7 +12,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/user', { email, password });
+      const response = await axios.post('https://password-reset-task-h1gs.onrender.com/api/user', { email, password });
       setMessage(response.data.message);
       navigate('/login');
     } catch (error) {
