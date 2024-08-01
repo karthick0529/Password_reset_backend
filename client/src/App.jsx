@@ -6,8 +6,14 @@ import Register from './components/Register';
 import ResetPasswordRequest from './components/ResetPasswordRequest';
 import ResetPassword from './components/ResetPassword';
 import ProtectedData from './components/ProtectedData';
+import { useNavigate } from 'react-router-dom';
+
+
 
 function App() {
+
+  const navigate = useNavigate();
+  
   return (
     <Router>
       <CssBaseline />
@@ -16,9 +22,9 @@ function App() {
           <Typography variant="h6" style={{ flexGrow: 1,textAlign:"center" }}>
             PASSWORD RESET TASK
           </Typography>
-          <Button color="inherit" href="/login">Login</Button>
-          <Button color="inherit" href="/register">Register</Button>
-          <Button color="inherit" href="/reset-password-request">Reset Password</Button>
+          <Button color="inherit" onClick={() => navigate("login")}>Login</Button>
+          <Button color="inherit" onClick={() => navigate("register")}>Register</Button>
+          <Button color="inherit" onClick={() => navigate("reset-password-request")}>Reset Password</Button>
         </Toolbar>
       </AppBar>
       <Container>
