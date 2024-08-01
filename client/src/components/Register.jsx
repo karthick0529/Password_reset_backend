@@ -1,0 +1,50 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { TextField, Button, Container, Typography, Box } from '@mui/material';
+
+const Register = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:3000/api/user', { email, password });
+      setMessage(response.data.message);
+      navigate('/login');
+    } catch (error) {
+      setMessage(error.response.data.message);
+    }
+  };
+
+  return (
+    <Container>
+      <Typography variant="h4">Register</Typography>
+      <form onSubmit={handleSubmit}>
+        <TextField
+          label="Email"
+          type="email"
+          fullWidth
+          margin="normal"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <TextField
+          label="Password"
+          type="password"
+          fullWidth
+          margin="normal"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button type="submit" variant="contained" color="primary">Register</Button>
+        {message && <Box mt={2}><Typography color="error">{message}</Typography></Box>}
+      </form>
+    </Container>
+  );
+};
+
+export default Register;
