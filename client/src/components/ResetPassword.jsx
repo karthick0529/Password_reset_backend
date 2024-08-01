@@ -3,6 +3,9 @@ import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
 
+const API_URL = 'https://password-reset-task-h1gs.onrender.com';
+
+
 const ResetPassword = () => {
   const { token } = useParams();
   const [password, setPassword] = useState('');
@@ -12,7 +15,7 @@ const ResetPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`https://password-reset-task-h1gs.onrender.com/api/reset-password/${token}`, { password });
+      const response = await axios.post(`${API_URL}/api/reset-password/${token}`, { password });
       setMessage(response.data.message);
       navigate('/login');
     } catch (error) {

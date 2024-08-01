@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
 
+const API_URL = 'https://password-reset-task-h1gs.onrender.com';
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -12,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://password-reset-task-h1gs.onrender.com/api/authenticate', { email, password });
+      const response = await axios.post(`${API_URL}/api/authenticate`, { email, password });
       localStorage.setItem('token', response.data.token);
       navigate('/data');
     } catch (error) {
