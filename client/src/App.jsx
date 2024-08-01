@@ -13,9 +13,9 @@ import { useNavigate } from 'react-router-dom';
 function App() {
 
   const navigate = useNavigate();
-  
+
   return (
-    <Router>
+    <>
       <CssBaseline />
       <AppBar position="static">
         <Toolbar>
@@ -29,6 +29,7 @@ function App() {
       </AppBar>
       <Container>
         <Box mt={3}>
+        
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
@@ -37,9 +38,11 @@ function App() {
             <Route path="/data" element={<ProtectedData />} />
             <Route path="/" element={<Login />} />
           </Routes>
+        
         </Box>
       </Container>
-    </Router>
+      
+      </>
   );
 }
 
