@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Typography, Box } from '@mui/material';
 
-const API_URL = 'https://password-reset-task-cs4v.onrender.com/api';
+const API_URL = 'https://password-reset-task-1.onrender.com/api';
 
 
 const ProtectedData = () => {

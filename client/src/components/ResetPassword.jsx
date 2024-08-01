@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
 
-const API_URL = 'https://password-reset-task-cs4v.onrender.com/api';
+const API_URL = 'https://password-reset-task-1.onrender.com/api';
 
 
 const ResetPassword = () => {
